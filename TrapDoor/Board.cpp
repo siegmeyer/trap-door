@@ -104,8 +104,7 @@ Board::Board(__int16 tilesAcross, __int16 tilesDown)
 			bgTileVerts[vCount++] = 1.0f; // bl y texcoord
 		}
 	}//std::cout << "map size: " << sizeof(bgTileVerts)* attributeLength * numTiles << std::endl;
-
-	player = new Thing(startingY, inc);
+	player = new Thing(startingX, startingY, inc);
 }
 
 int Board::board_setup_opengl(){

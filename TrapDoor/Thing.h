@@ -21,14 +21,14 @@ class Thing
 {
 public:
 	// inc: tile size (length of one side)
-	Thing(float startingY, float inc);
+	Thing(float startingX, float startingY, float inc);
 	virtual ~Thing();
 
 	inline float get_x(){ return x; }
 	inline float get_y(){ return y; }
 	inline float get_lx(){ return lx; }
 	inline float get_ly(){ return ly; }
-	inline float get_radius(){ return radius; }
+	inline float get_thing_width(){ return thingWidth; }
 	inline unsigned char get_orientation(){ return orientation; }
 
 	inline void set_x(float x){ this->x = x; }
@@ -42,11 +42,13 @@ public:
 
 	void update_matrix(GLuint uniTrans);
 private:
+	float boardTopLeftX;
+	float boardTopLeftY;
 	float x;
 	float y;
 	float lx;
 	float ly;
-	float radius;
+	float thingWidth;
 	float speed;
 	short thingType;
 	unsigned char orientation;

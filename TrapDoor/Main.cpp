@@ -66,7 +66,7 @@ int main(int argc, char* argv[]){
 			Sleep(sleep_time);
 		}
 		else {
-			printf("Long frame.");
+			printf("Long frame.\n");
 		}
 	}
 
